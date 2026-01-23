@@ -96,7 +96,8 @@
   border-radius: inherit;
   padding: 2px;
   background: var(--gradient-blue-purple);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#242323 0 0) content-box, linear-gradient(#1c1b1b 0 0);
+  mask: linear-gradient(#242323 0 0) content-box, linear-gradient(#1c1b1b 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 }
