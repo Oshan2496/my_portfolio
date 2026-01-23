@@ -6,6 +6,7 @@
     <meta name="description" content="Professional portfolio showcasing my work and skills">
     <title>Home - My Portfolio</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <!-- Header -->
@@ -29,14 +30,14 @@
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">Hello, I'm [Your Name]</h1>
-                <p class="hero-subtitle" >
-                <span id="typewriter"
-                    data-words='["Frontend Developer", "UI Designer", "JavaScript Lover"]'
-                    data-speed="100"
-                    data-delay="1500"
-                    data-delete="60">
-                </span>
-</p>
+                <p class="hero-subtitle">
+                    <span class="typewriter" 
+                          data-texts='["Full-Stack Developer", "Creative Problem Solver", "Tech Enthusiast", "UI/UX Designer"]'
+                          data-speed="100"
+                          data-delete-speed="50"
+                          data-delay="2000">
+                    </span>
+                </p>
                 <div class="hero-buttons">
                     <a href="projects.html" class="btn btn-primary btn-lg">View My Work</a>
                     <a href="contact.html" class="btn btn-outline btn-lg">Get In Touch</a>
@@ -131,11 +132,20 @@
                 </div>
                 <div class="footer-section">
                     <h3>Connect</h3>
-                     <div class="social-links">
-                    <a href="https://www.linkedin.com/in/oshan-alwis-4329b2216/"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://github.com/Oshan2496"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.facebook.com/oshan.alwis.58?rdid=ojnPrquRc2YGA1Hz&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1K3jiN1TqX%2F"><i class="fa-brands fa-facebook"></i></a>
-                </div>
+                    <div class="social-links">
+                        <a href="https://github.com/Oshan2496" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/oshan-alwis-4329b2216/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.facebook.com/oshan.alwis.58?rdid=ojnPrquRc2YGA1Hz&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1K3jiN1TqX%2F" class="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="mailto:your.email@example.com" class="social-link" aria-label="Email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -144,6 +154,6 @@
         </div>
     </footer>
 
-    <script src="js/main.js" type="module"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
