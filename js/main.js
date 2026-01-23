@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (entry.isIntersecting) {
           entry.target.style.opacity = "1";
           entry.target.style.transform = "translateY(0)";
-          observer.unobserve(entry.target); // ✅ improves performance
+          observer.unobserve(entry.target); 
         }
       });
     }, observerOptions);
@@ -204,7 +204,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       overlay.addEventListener("click", (e) => {
-        if (e.target === overlay) {
+      if (e.target === overlay) {
           overlay.classList.remove("active");
         }
       });
