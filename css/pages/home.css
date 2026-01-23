@@ -1,0 +1,86 @@
+/* ===================================
+   HOME PAGE STYLES
+   =================================== */
+
+.hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-white) 100%);
+  text-align: center;
+  padding: var(--spacing-2xl) 0;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  margin-bottom: var(--spacing-md);
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-light);
+  margin-bottom: var(--spacing-xl);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.features-section {
+  background-color: var(--bg-white);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-xl);
+}
+
+.feature-card {
+  text-align: center;
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+}
+
+.feature-card:hover {
+  background-color: var(--bg-light);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--primary-color);
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+  }
+}

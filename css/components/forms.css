@@ -1,0 +1,68 @@
+/* ===================================
+   FORM COMPONENTS
+   =================================== */
+
+.form-group {
+  margin-bottom: var(--spacing-md);
+}
+
+.form-label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  padding: var(--spacing-sm);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all var(--transition-fast);
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-error {
+  color: #dc2626;
+  font-size: 0.875rem;
+  margin-top: var(--spacing-xs);
+}
+
+.form-input.error,
+.form-textarea.error {
+  border-color: #dc2626;
+}
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.checkbox-input {
+  width: 1.25rem;
+  height: 1.25rem;
+  cursor: pointer;
+}
+
+.form-hint {
+  font-size: 0.875rem;
+  color: var(--text-light);
+  margin-top: var(--spacing-xs);
+}

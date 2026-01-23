@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse through my portfolio of web development projects">
+    <title>Projects - My Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">Portfolio</a>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+            <nav>
+                <ul class="nav">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Projects Header -->
+    <section class="project-header">
+        <div class="container">
+            <h1>My Projects</h1>
+            <p>A showcase of my recent work</p>
+        </div>
+    </section>
+
+    <!-- Filter Buttons -->
+    <section class="section">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <div class="card project-card" data-category="web">
+                    <img src="assets/images/Projects/project1.jpg" alt="E-Commerce Platform" class="project-image">
+                    <div class="card-content">
+                        <h3 class="card-title">E-Commerce Platform</h3>
+                        <p class="card-text">A full-featured online shopping platform with payment integration and admin dashboard.</p>
+                        <div class="card-tags">
+                            <span class="tag tag-primary">React</span>
+                            <span class="tag tag-secondary">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                    </div>
+                    <div class="project-overlay">
+                        <h3>E-Commerce Platform</h3>
+                        <p>Built with React and Node.js, featuring real-time inventory management and secure payment processing.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">🔗 Live Demo</a>
+                            <a href="#" class="project-link">💻 Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card project-card" data-category="web">
+                    <img src="assets/images/Projects/project2.jpg" alt="Task Management App" class="project-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Task Management App</h3>
+                        <p class="card-text">Collaborative project management tool with real-time updates and team features.</p>
+                        <div class="card-tags">
+                            <span class="tag tag-primary">Vue.js</span>
+                            <span class="tag tag-secondary">Firebase</span>
+                            <span class="tag">Vuex</span>
+                        </div>
+                    </div>
+                    <div class="project-overlay">
+                        <h3>Task Management App</h3>
+                        <p>Real-time collaboration tool with drag-and-drop interface and team messaging capabilities.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">🔗 Live Demo</a>
+                            <a href="#" class="project-link">💻 Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card project-card" data-category="mobile">
+                    <img src="assets/images/Projects/project3.jpg" alt="Fitness Tracker" class="project-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Fitness Tracker</h3>
+                        <p class="card-text">Mobile app for tracking workouts, nutrition, and fitness goals.</p>
+                        <div class="card-tags">
+                            <span class="tag tag-primary">React Native</span>
+                            <span class="tag tag-secondary">Redux</span>
+                            <span class="tag">Chart.js</span>
+                        </div>
+                    </div>
+                    <div class="project-overlay">
+                        <h3>Fitness Tracker</h3>
+                        <p>Cross-platform mobile app with workout plans, progress tracking, and nutrition logging.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">🔗 Live Demo</a>
+                            <a href="#" class="project-link">💻 Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card project-card" data-category="web">
+                    <img src="assets/images/Projects/project4.jpg" alt="Blog Platform" class="project-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Blog Platform</h3>
+                        <p class="card-text">Modern blogging platform with markdown support and SEO optimization.</p>
+                        <div class="card-tags">
+                            <span class="tag tag-primary">Next.js</span>
+                            <span class="tag tag-secondary">GraphQL</span>
+                            <span class="tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                    <div class="project-overlay">
+                        <h3>Blog Platform</h3>
+                        <p>Server-side rendered blog with markdown editor, comments, and social sharing features.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">🔗 Live Demo</a>
+                            <a href="#" class="project-link">💻 Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card project-card" data-category="design">
+                    <img src="assets/images/Projects/project5.jpg" alt="Portfolio Template" class="project-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Portfolio Template</h3>
+                        <p class="card-text">Customizable portfolio template with animations and responsive design.</p>
+                        <div class="card-tags">
+                            <span class="tag tag-primary">HTML/CSS</span>
+                            <span class="tag tag-secondary">JavaScript</span>
+                            <span class="tag">GSAP</span>
+                        </div>
+                    </div>
+                    <div class="project-overlay">
+                        <h3>Portfolio Template</h3>
+                        <p>Beautiful portfolio template with smooth animations and fully customizable sections.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">🔗 Live Demo</a>
+                            <a href="#" class="project-link">💻 Source Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card project-card" data-category="web">
+                    <img src="assets/images/project/project6.jpg" alt="Weather Dashboard" class="project-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Weather Dashboard</h3>
+                        <p class="card-text">Real-time weather application with forecasts and location tracking.</p>
+                        <div class="card-tags">
+                            <span class="tag tag-primary">Angular</span>
+                            <span class="tag tag-secondary">TypeScript</span>
+                            <span class="tag">RxJS</span>
+                        </div>
+                    </div>
+                    <div class="project-overlay">
+                        <h3>Weather Dashboard</h3>
+                        <p>Interactive weather app with 7-day forecasts, maps, and customizable widgets.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">🔗 Live Demo</a>
+                            <a href="#" class="project-link">💻 Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About</h3>
+                    <p>Passionate developer dedicated to creating innovative solutions and beautiful user experiences.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <p><a href="index.html">Home</a></p>
+                    <p><a href="about.html">About</a></p>
+                    <p><a href="projects.html">Projects</a></p>
+                    <p><a href="contact.html">Contact</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="GitHub">🔗</a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+                        <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                        <a href="#" class="social-link" aria-label="Email">✉️</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 [Your Name]. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

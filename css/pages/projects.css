@@ -1,0 +1,110 @@
+/* ===================================
+   PROJECTS PAGE STYLES
+   =================================== */
+
+.projects-header {
+  padding: var(--spacing-2xl) 0;
+  background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-white) 100%);
+  text-align: center;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-xl);
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: var(--spacing-xs) var(--spacing-md);
+  border: 2px solid var(--border-color);
+  background-color: var(--bg-white);
+  color: var(--text-dark);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.filter-btn:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.filter-btn.active {
+  background-color: var(--primary-color);
+  color: var(--text-white);
+  border-color: var(--primary-color);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.project-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.1);
+}
+
+.project-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 100%);
+  color: var(--text-white);
+  padding: var(--spacing-lg);
+  transform: translateY(60%);
+  transition: transform var(--transition-base);
+}
+
+.project-card:hover .project-overlay {
+  transform: translateY(0);
+}
+
+.project-links {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--text-white);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  transition: all var(--transition-fast);
+}
+
+.project-link:hover {
+  background-color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-overlay {
+    transform: translateY(0);
+  }
+}

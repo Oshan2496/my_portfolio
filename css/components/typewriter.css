@@ -1,0 +1,14 @@
+#typewriter {
+  border-right: 2px solid currentColor;
+  padding-right: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: blinkCursor 0.7s infinite;
+}
+
+@keyframes blinkCursor {
+  50% {
+    border-color: transparent;
+  }
+}
