@@ -152,7 +152,7 @@
 /* Gradient Buttons */
 .btn-gradient-primary {
   background: var(--gradient-blue-purple);
-  color: white;
+  color: rgb(59, 59, 59);
   border: none;
   position: relative;
   overflow: hidden;
