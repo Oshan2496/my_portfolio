@@ -1,0 +1,228 @@
+/* ===================================
+   DARK THEME - Professional Portfolio
+   =================================== */
+
+:root {
+  /* Dark Theme Colors */
+  --dark-bg-primary: #0a0a0f;
+  --dark-bg-secondary: #13131a;
+  --dark-bg-tertiary: #1a1a24;
+  --dark-bg-card: rgba(26, 26, 36, 0.6);
+  
+  /* Text Colors */
+  --dark-text-primary: #e8e8f0;
+  --dark-text-secondary: #a8a8b8;
+  --dark-text-muted: #6b6b7e;
+  
+  /* Accent Colors */
+  --dark-primary: #6366f1;
+  --dark-primary-light: #818cf8;
+  --dark-secondary: #a855f7;
+  --dark-accent: #f59e0b;
+  
+  /* Borders */
+  --dark-border: rgba(255, 255, 255, 0.05);
+  --dark-border-hover: rgba(255, 255, 255, 0.1);
+  
+  /* Gradients */
+  --dark-gradient-primary: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  --dark-gradient-secondary: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+  --dark-gradient-bg: radial-gradient(circle at top right, rgba(99, 102, 241, 0.1), transparent);
+  
+  /* Shadows */
+  --dark-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --dark-shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --dark-shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --dark-shadow-glow: 0 0 20px rgba(99, 102, 241, 0.3);
+  
+  /* Glass Effect */
+  --dark-glass-bg: rgba(26, 26, 36, 0.4);
+  --dark-glass-border: rgba(255, 255, 255, 0.06);
+  --dark-backdrop-blur: blur(12px);
+}
+
+/* Dark Theme Base Styles */
+body.dark-theme {
+  background-color: var(--dark-bg-primary);
+  color: var(--dark-text-primary);
+  background-image: var(--dark-gradient-bg);
+  background-attachment: fixed;
+}
+
+/* Dark Theme Typography */
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5,
+body.dark-theme h6 {
+  color: var(--dark-text-primary);
+}
+
+body.dark-theme p {
+  color: var(--dark-text-secondary);
+}
+
+/* Dark Theme Links */
+body.dark-theme a {
+  color: var(--dark-primary-light);
+}
+
+body.dark-theme a:hover {
+  color: var(--dark-secondary);
+}
+
+/* Dark Theme Cards */
+body.dark-theme .card {
+  background: var(--dark-glass-bg);
+  backdrop-filter: var(--dark-backdrop-blur);
+  border: 1px solid var(--dark-glass-border);
+  box-shadow: var(--dark-shadow-md);
+}
+
+body.dark-theme .card:hover {
+  border-color: var(--dark-border-hover);
+  box-shadow: var(--dark-shadow-lg);
+  transform: translateY(-8px);
+}
+
+/* Dark Theme Header */
+body.dark-theme .header {
+  background: var(--dark-glass-bg);
+  backdrop-filter: var(--dark-backdrop-blur);
+  border-bottom: 1px solid var(--dark-border);
+}
+
+body.dark-theme .logo {
+  background: var(--dark-gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Dark Theme Navigation */
+body.dark-theme .nav-link {
+  color: var(--dark-text-secondary);
+}
+
+body.dark-theme .nav-link:hover,
+body.dark-theme .nav-link.active {
+  color: var(--dark-primary-light);
+  background-color: rgba(99, 102, 241, 0.1);
+}
+
+/* Dark Theme Buttons */
+body.dark-theme .btn-primary {
+  background: var(--dark-gradient-primary);
+  box-shadow: var(--dark-shadow-glow);
+}
+
+body.dark-theme .btn-primary:hover {
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.5);
+  transform: translateY(-3px);
+}
+
+body.dark-theme .btn-outline {
+  border-color: var(--dark-primary);
+  color: var(--dark-primary-light);
+}
+
+body.dark-theme .btn-outline:hover {
+  background: var(--dark-gradient-primary);
+  color: white;
+}
+
+/* Dark Theme Forms */
+body.dark-theme .form-input,
+body.dark-theme .form-textarea,
+body.dark-theme .form-select {
+  background-color: var(--dark-bg-tertiary);
+  border-color: var(--dark-border);
+  color: var(--dark-text-primary);
+}
+
+body.dark-theme .form-input:focus,
+body.dark-theme .form-textarea:focus,
+body.dark-theme .form-select:focus {
+  border-color: var(--dark-primary);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+/* Dark Theme Footer */
+body.dark-theme .footer {
+  background-color: var(--dark-bg-secondary);
+  border-top: 1px solid var(--dark-border);
+}
+
+/* Dark Theme Sections */
+body.dark-theme .section {
+  background-color: transparent;
+}
+
+body.dark-theme .features-section,
+body.dark-theme .about-header,
+body.dark-theme .projects-header,
+body.dark-theme .contact-header {
+  background: radial-gradient(circle at top, rgba(99, 102, 241, 0.1), transparent);
+}
+
+/* Dark Theme Tags */
+body.dark-theme .tag {
+  background-color: rgba(99, 102, 241, 0.1);
+  color: var(--dark-primary-light);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+body.dark-theme .tag-primary {
+  background-color: rgba(99, 102, 241, 0.15);
+  color: var(--dark-primary-light);
+}
+
+body.dark-theme .tag-secondary {
+  background-color: rgba(168, 85, 247, 0.15);
+  color: var(--dark-secondary);
+}
+
+/* Dark Theme Social Links */
+body.dark-theme .social-link {
+  background-color: rgba(99, 102, 241, 0.1);
+  border: 1px solid var(--dark-border);
+}
+
+body.dark-theme .social-link:hover {
+  background: var(--dark-gradient-primary);
+  box-shadow: var(--dark-shadow-glow);
+}
+
+/* Dark Theme Toggle Button (Optional) */
+.theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--dark-gradient-primary);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: var(--dark-shadow-lg);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1) rotate(15deg);
+  box-shadow: var(--dark-shadow-glow);
+}
+
+/* Auto Dark Mode based on system preference */
+@media (prefers-color-scheme: dark) {
+  body:not(.light-theme) {
+    background-color: var(--dark-bg-primary);
+    color: var(--dark-text-primary);
+  }
+}

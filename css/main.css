@@ -3,6 +3,10 @@
    =================================== */
 
 /* Import all stylesheets */
+@import url('themes/dark-theme.css');
+@import url('effects/gradients.css');
+@import url('effects/glass.css');
+@import url('effects/animations.css');
 @import url('layout/header.css');
 @import url('layout/footer.css');
 @import url('layout/grid.css');
@@ -15,13 +19,13 @@
 @import url('pages/about.css');
 @import url('pages/projects.css');
 @import url('pages/contact.css');
-@import url('components/typewriter.css');
+
 /* CSS Variables */
 :root {
   /* Colors */
   --primary-color: #2563eb;
-  --secondary-color: #6510f8;
-  --accent-color: #f7ad2c;
+  --secondary-color: #7c3aed;
+  --accent-color: #f59e0b;
   --text-dark: #1f2937;
   --text-light: #6b7280;
   --text-white: #ffffff;

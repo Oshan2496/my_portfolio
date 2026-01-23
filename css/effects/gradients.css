@@ -1,0 +1,282 @@
+/* ===================================
+   GRADIENT EFFECTS - Professional Portfolio
+   =================================== */
+
+/* Gradient Definitions */
+:root {
+  /* Primary Gradients */
+  --gradient-purple-blue: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-blue-purple: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  --gradient-pink-orange: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --gradient-orange-red: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  --gradient-green-blue: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  
+  /* Dark Gradients */
+  --gradient-dark-blue: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  --gradient-dark-purple: linear-gradient(135deg, #360033 0%, #0b8793 100%);
+  
+  /* Radial Gradients */
+  --gradient-radial-primary: radial-gradient(circle at top right, rgba(99, 102, 241, 0.15), transparent);
+  --gradient-radial-secondary: radial-gradient(circle at bottom left, rgba(168, 85, 247, 0.15), transparent);
+  
+  /* Animated Gradients */
+  --gradient-animated: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  
+  /* Glass Gradients */
+  --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: var(--gradient-blue-purple);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: gradientShift 5s ease infinite;
+}
+
+.gradient-text-primary {
+  background: var(--gradient-purple-blue);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-secondary {
+  background: var(--gradient-pink-orange);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Gradient Backgrounds */
+.gradient-bg-primary {
+  background: var(--gradient-blue-purple);
+}
+
+.gradient-bg-secondary {
+  background: var(--gradient-pink-orange);
+}
+
+.gradient-bg-dark {
+  background: var(--gradient-dark-purple);
+}
+
+/* Animated Gradient Background */
+.gradient-bg-animated {
+  background: var(--gradient-animated);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Gradient Borders */
+.gradient-border {
+  position: relative;
+  background: var(--bg-white);
+  border-radius: var(--radius-lg);
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: var(--gradient-blue-purple);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* Gradient Overlay */
+.gradient-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.gradient-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.8), rgba(168, 85, 247, 0.8));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gradient-overlay:hover::after {
+  opacity: 1;
+}
+
+/* Gradient Cards */
+.gradient-card {
+  background: var(--gradient-glass);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.gradient-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: var(--gradient-blue-purple);
+  opacity: 0.1;
+  transform: rotate(45deg);
+  transition: transform 0.6s ease;
+}
+
+.gradient-card:hover::before {
+  transform: rotate(45deg) translate(25%, 25%);
+}
+
+/* Gradient Buttons */
+.btn-gradient-primary {
+  background: var(--gradient-blue-purple);
+  color: white;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-gradient-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-purple-blue);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.btn-gradient-primary:hover::before {
+  opacity: 1;
+}
+
+.btn-gradient-secondary {
+  background: var(--gradient-pink-orange);
+  color: white;
+  border: none;
+}
+
+/* Gradient Icons */
+.icon-gradient {
+  background: var(--gradient-blue-purple);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Gradient Dividers */
+.gradient-divider {
+  height: 2px;
+  background: var(--gradient-blue-purple);
+  margin: var(--spacing-lg) 0;
+  border-radius: 2px;
+}
+
+/* Gradient Glow Effect */
+.gradient-glow {
+  position: relative;
+}
+
+.gradient-glow::after {
+  content: '';
+  position: absolute;
+  inset: -20px;
+  background: var(--gradient-blue-purple);
+  filter: blur(40px);
+  opacity: 0.3;
+  z-index: -1;
+  border-radius: inherit;
+  transition: opacity 0.3s ease;
+}
+
+.gradient-glow:hover::after {
+  opacity: 0.5;
+}
+
+/* Gradient Progress Bars */
+.progress-gradient {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-gradient .progress-fill {
+  height: 100%;
+  background: var(--gradient-blue-purple);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
+  transition: width 1s ease;
+}
+
+/* Mesh Gradient Background */
+.mesh-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-size: 200% 200%;
+  position: relative;
+}
+
+.mesh-gradient::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(255, 0, 128, 0.3) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(0, 128, 255, 0.3) 0%, transparent 50%),
+              radial-gradient(circle at 40% 20%, rgba(128, 255, 0, 0.3) 0%, transparent 50%);
+  animation: meshMove 20s ease infinite;
+}
+
+@keyframes meshMove {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+}
+
+/* Holographic Effect */
+.holographic {
+  background: linear-gradient(45deg, #ff0080, #ff8c00, #40e0d0, #ff0080);
+  background-size: 400% 400%;
+  animation: holographicShift 8s ease infinite;
+}
+
+@keyframes holographicShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+}
