@@ -158,7 +158,7 @@ export class Typewriter {
    * Setup audio
    */
   setupAudio() {
-    const soundUrl = this.options.soundUrl || 'data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBCx+zPLTgjMGHm7A7+OZUCE';
+    const soundUrl = this.options.soundUrl || "assets/audio/keyboard-typing-sound-effect.mp3";
     
     this.audio = new Audio(soundUrl);
     this.audio.volume = 0.3;
