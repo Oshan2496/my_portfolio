@@ -6,19 +6,88 @@
 import { Typewriter } from "./components/typewriter.js";
 
 /**
+ * EmailJS Configuration
+ * Send email through contact form
+ */
+function sendMail(e) {
+  e.preventDefault(); // Prevent form from submitting normally
+  
+  const submitBtn = document.querySelector('#contactForm button[type="submit"]');
+  const originalText = submitBtn.textContent;
+  
+  // Disable button and show loading
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending...';
+  submitBtn.classList.add('loading');
+
+  // Get form values
+  let params = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    subject: document.getElementById("subject").value,
+    message: document.getElementById("message").value,
+  };
+
+  // Send email using EmailJS
+  emailjs.send("service_e1fi8wq", "template_ihkralo", params)
+    .then(function(response) {
+      console.log('SUCCESS!', response.status, response.text);
+      
+      // Show success message
+      showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
+      
+      // Reset form
+      document.getElementById("contactForm").reset();
+      
+      // Re-enable button
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalText;
+      submitBtn.classList.remove('loading');
+    })
+    .catch(function(error) {
+      console.log('FAILED...', error);
+      
+      // Show error message
+      showNotification('Failed to send message. Please try again or email me directly.', 'error');
+      
+      // Re-enable button
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalText;
+      submitBtn.classList.remove('loading');
+    });
+}
+
+/**
+ * Show notification message
+ */
+function showNotification(message, type) {
+  // Remove existing notifications
+  const existing = document.querySelector('.notification-message');
+  if (existing) existing.remove();
+
+  // Create notification
+  const notification = document.createElement('div');
+  notification.className = `notification-message ${type}`;
+  notification.textContent = message;
+  
+  // Insert at top of form
+  const form = document.getElementById('contactForm');
+  form.insertBefore(notification, form.firstChild);
+  
+  // Show with animation
+  setTimeout(() => notification.classList.add('show'), 10);
+  
+  // Auto-hide after 5 seconds
+  setTimeout(() => {
+    notification.classList.remove('show');
+    setTimeout(() => notification.remove(), 300);
+  }, 5000);
+}
+
+/**
  * Main App Class
  * Centralized control for all portfolio features
  */
-function sendMail(){
-  let params = {
-    name : document.getElementById("name").value,
-    email : document.getElementById("email").value,
-    subject : document.getElementById("subject").value,
-    message : document.getElementById("message").value,
-  }
-
-  emailjs.send("service_e1fi8wq","template_ihkralo",params).then(alert ("Message sent successfully"))
-}
 class PortfolioApp {
   constructor() {
     this.state = {
@@ -355,85 +424,17 @@ class PortfolioApp {
   }
 
   // ===================================
-  // CONTACT FORM
+  // CONTACT FORM - UPDATED WITH EMAILJS
   // ===================================
   initContactForm() {
     const form = document.getElementById('contactForm');
-    const successMessage = document.getElementById('successMessage');
-
     if (!form) return;
 
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-
-      const submitBtn = form.querySelector('button[type="submit"]');
-      const originalText = submitBtn.textContent;
-      
-      // Disable button and show loading
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Sending...';
-      submitBtn.classList.add('loading');
-
-      // Get form data
-      const formData = new FormData(form);
-      const data = Object.fromEntries(formData.entries());
-
-      try {
-        // Simulate API call (replace with actual endpoint)
-        await this.submitForm(data);
-        
-        // Show success message
-        this.showMessage(successMessage || this.createSuccessMessage(), 'success');
-        form.reset();
-        
-      } catch (error) {
-        console.error('Form submission error:', error);
-        this.showMessage(this.createErrorMessage(), 'error');
-      } finally {
-        // Re-enable button
-        submitBtn.disabled = false;
-        submitBtn.textContent = originalText;
-        submitBtn.classList.remove('loading');
-      }
-    });
+    // Attach sendMail function to form submit
+    form.addEventListener('submit', sendMail);
 
     // Real-time validation
     this.addFormValidation(form);
-  }
-
-  async submitForm(data) {
-    // Simulate API delay
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        console.log('Form submitted:', data);
-        resolve();
-      }, 1500);
-    });
-  }
-
-  createSuccessMessage() {
-    const message = document.createElement('div');
-    message.id = 'successMessage';
-    message.className = 'success-message';
-    message.textContent = 'Message sent successfully!';
-    document.querySelector('.contact-form').prepend(message);
-    return message;
-  }
-
-  createErrorMessage() {
-    const message = document.createElement('div');
-    message.className = 'error-message';
-    message.textContent = 'Failed to send message. Please try again.';
-    document.querySelector('.contact-form').prepend(message);
-    return message;
-  }
-
-  showMessage(element, type) {
-    element.classList.add('show');
-    
-    setTimeout(() => {
-      element.classList.remove('show');
-    }, 5000);
   }
 
   addFormValidation(form) {
