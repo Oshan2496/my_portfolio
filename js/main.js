@@ -9,6 +9,16 @@ import { Typewriter } from "./components/typewriter.js";
  * Main App Class
  * Centralized control for all portfolio features
  */
+function sendMail(){
+  let params = {
+    name : document.getElementById("name").value,
+    email : document.getElementById("email").value,
+    subject : document.getElementById("subject").value,
+    message : document.getElementById("message").value,
+  }
+
+  emailjs.send("service_e1fi8wq","template_ihkralo",params).then(alert ("Message sent successfully"))
+}
 class PortfolioApp {
   constructor() {
     this.state = {
